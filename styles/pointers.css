@@ -1,0 +1,13 @@
+@layer components {
+  .pointer-line-arrow {
+    marker-mid: url(#pointerArrow);
+  }
+
+  .pointer-collider:hover + .pointer-line-arrow {
+    marker-mid: url(#pointerArrowHover);
+  }
+
+  .pointer-line-arrow-selected {
+    marker-mid: url(#pointerArrowSelected);
+  }
+}

@@ -1,0 +1,13 @@
+@layer components {
+  .input-container {
+    @apply flex flex-col;
+  }
+
+  .input-label {
+    @apply text-center;
+  }
+
+  .input {
+    @apply w-full py-1 px-2 rounded-lg;
+  }
+}

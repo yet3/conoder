@@ -1,0 +1,35 @@
+@import './node.css';
+@import './pointers.css';
+@import './common.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: subpixel-antialiased;
+  backface-visibility: hidden;
+}
+
+html {
+  color-scheme: dark;
+}
+
+.w-tc-editor {
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #858e99 !important;
+  /* --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58; */
+}

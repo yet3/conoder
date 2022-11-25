@@ -1,0 +1,27 @@
+@layer components {
+  .node {
+    @apply relative text-sm text-center text-node-primary;
+    @apply bg-node rounded-lg;
+  }
+
+  .node-content {
+    @apply flex flex-col p-2;
+  }
+
+  .shiny-border::before {
+    content: '';
+    border-radius: inherit;
+    background: linear-gradient(124.02deg, #656565 13.26%, #444444 35.16%, #444444 100.87%);
+    @apply -z-[1] top-0 left-0 absolute w-full h-full p-[1px] -translate-x-[1px] -translate-y-[1px] box-content;
+  }
+
+  .shiny-border:where(.node.node-border-selected)::before {
+    background: none;
+    @apply bg-node-border-selected;
+  }
+
+  .shiny-border:where(.node:hover:not(.node-border-selected))::before {
+    background: none;
+    @apply bg-node-border-selected/50;
+  }
+}
