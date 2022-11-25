@@ -11,7 +11,6 @@ interface Props {
   outNode?: GNode;
   inNode?: GNode;
 
-
   startX?: number;
   startY?: number;
   endX?: number;
@@ -56,8 +55,7 @@ const Pointer = (props: Props) => {
     camY = outNode.y + outRect.height / 2;
     endX = inNode.x - camX + inRect.width / 2;
     endY = inNode.y - camY + inRect.height / 2;
-
-  } 
+  }
 
   let dx = endX - startX;
   let dy = endY - startY;
@@ -76,7 +74,7 @@ const Pointer = (props: Props) => {
   height += PAD * 2;
 
   return (
-    <WithCamera x={camX} y={camY}>
+    <WithCamera x={camX} y={camY} style={{ pointerEvents: 'none' }}>
       <div
         className="pointer-events-none"
         style={{

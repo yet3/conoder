@@ -1,13 +1,15 @@
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import { useCamera } from './useCamera.hook';
 
 interface Props {
   x: number | (() => number);
   y: number | (() => number);
   children: ReactNode;
+
+  style?: CSSProperties;
 }
 
-const WithCamera = ({ x, y, children }: Props) => {
+const WithCamera = ({ x, y, children, style }: Props) => {
   const ctx = useCamera();
 
   let _x, _y;
@@ -18,7 +20,7 @@ const WithCamera = ({ x, y, children }: Props) => {
   else _y = y;
 
   return (
-    <div className="relative" style={ctx.getOnCanvasStyle({ x: _x, y: _y })}>
+    <div className="relative" style={{ ...ctx.getOnCanvasStyle({ x: _x, y: _y }), ...style }}>
       {children}
     </div>
   );
