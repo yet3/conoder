@@ -161,6 +161,7 @@ export default function Home() {
       window.localStorage.setItem('first_load-1', 'true');
       nodes.current = getExampleGraph();
       saveGraph('Example', nodes.current);
+      autoSaveGraph()
       rerender();
     } else {
       (async () => {
