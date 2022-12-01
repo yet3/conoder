@@ -185,8 +185,8 @@ const Camera = ({ children, disabled, ...props }: Props) => {
       const cam = ctx.current.camera;
       const { deltaY, deltaX } = e;
 
+      e.preventDefault();
       if (e.ctrlKey || e.metaKey) {
-        e.preventDefault();
         let scale = cam.scale - deltaY * 0.01;
         scale = Math.max(CAM_MIN_SCALE, Math.min(CAM_MAX_SCALE, scale));
 
