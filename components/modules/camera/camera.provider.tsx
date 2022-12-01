@@ -177,10 +177,10 @@ const Camera = ({ children, disabled, ...props }: Props) => {
     const onWheel = (e: globalThis.WheelEvent) => {
       if (!canvasRef.current) return;
 
-      const targetEl = e.target as HTMLElement;
-      if (!targetEl?.getAttribute(CAM_CAN_MOVME_ATR)) {
-        return;
-      }
+      /* const targetEl = e.target as HTMLElement; */
+      /* if (!targetEl?.getAttribute(CAM_CAN_MOVME_ATR)) { */
+      /*   return; */
+      /* } */
 
       const cam = ctx.current.camera;
       const { deltaY, deltaX } = e;
